@@ -3,6 +3,8 @@ package main
 import (
 	"bufio"
 	"fmt"
+
+	//TODO use go modules ,
 	"gogogo/MyTasks/library/bookinfo"
 	"os"
 	"strings"
