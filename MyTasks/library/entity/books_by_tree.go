@@ -110,15 +110,16 @@ func (b *BooksByTitleTree) finMin(node *Node) *Node {
 	}
 	return cur
 }
-func (b *BooksByTitleTree) Removeaction(title string) {
-	var removed bool
-	b.root, removed = b.removeNode(b.root, title)
-	if removed {
-		fmt.Printf("Book '%s' has been removed from library.\n", title)
-	} else {
-		fmt.Printf("threr is no by name '%s' in the library ", title)
-	}
-}
+
+// func (b *BooksByTitleTree) Removeaction(title string) {
+// 	var removed bool
+// 	b.root, removed = b.removeNode(b.root, title)
+// 	if removed {
+// 		fmt.Printf("Book '%s' has been removed from library.\n", title)
+// 	} else {
+// 		fmt.Printf("threr is no by name '%s' in the library ", title)
+// 	}
+// }
 
 // ////////////////////////////////////////////////////////////////////////////////////////////////
 func (b *BooksByTitleTree) BorrowBookFromTree(title string, borrower string, days int) (bool, string) {

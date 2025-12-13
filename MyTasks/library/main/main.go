@@ -5,15 +5,15 @@ import (
 	"fmt"
 
 	//TODO use go modules ,
-	"gogogo/MyTasks/library/bookinfo"
+	"gogogo/MyTasks/library/entity"
 	"os"
 	"strings"
 )
 
 func main() {
-	//TODO use constructor for entity struct//ithink done
-	//TODO use Library struct//done
-	library := bookinfo.NewLibrary()
+	//TODO use constructor for entity struct//mostly done
+
+	library := entity.NewLibrary()
 	reader := bufio.NewReader(os.Stdin)
 
 	//Add default books
@@ -27,7 +27,7 @@ func main() {
 	}
 
 	for _, book := range defaultBooks {
-		library.AddingBook(&bookinfo.Book{
+		library.AddingBook(&entity.Book{
 			Title:     book,
 			Available: true,
 		})
@@ -53,7 +53,7 @@ func main() {
 			fmt.Print("Enter the title of the book to add: ")
 			title, _ = reader.ReadString('\n')
 			title = strings.TrimSpace(title)
-			library.AddingBook(&bookinfo.Book{
+			library.AddingBook(&entity.Book{
 				Title: title,
 			})
 		case 2:
